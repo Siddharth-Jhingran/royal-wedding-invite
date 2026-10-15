@@ -145,33 +145,13 @@ export const DESTINATIONS = [
     concierge: 'tel:+919450375503',
   },
   {
-    name: 'Taj Lake Palace',
-    role: 'Reception & Stay',
+    name: 'Inara Farms',
+    role: 'Wedding Ceremony & Reception',
     image:
       'https://images.unsplash.com/photo-1564501049412-61c2a308c1aa?auto=format&fit=crop&w=1200&q=80',
-    address: 'Pichola Lake, Udaipur',
-    stay: 'Boat transfers from Bansi Ghat. White-marble rooms held under the wedding block.',
-    map: 'https://maps.google.com/?q=Taj+Lake+Palace+Udaipur',
-    concierge: 'tel:+911234000222',
-  },
-  {
-    name: 'The Leela Palace',
-    role: 'Mehendi & Guest Hotel',
-    image:
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
-    address: 'Lake Pichola, Udaipur',
-    stay: 'Garden-facing rooms for outstation guests. Shuttle to all venues.',
-    map: 'https://maps.google.com/?q=The+Leela+Palace+Udaipur',
-    concierge: 'tel:+911234000333',
-  },
-  {
-    name: 'Fateh Prakash Palace',
-    role: 'Sangeet Night',
-    image:
-      'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
-    address: 'City Palace Complex, Udaipur',
-    stay: 'Crystal gallery cocktails at 6:30 PM. Traditional attire encouraged.',
-    map: 'https://maps.google.com/?q=Fateh+Prakash+Palace+Udaipur',
-    concierge: 'tel:+911234000444',
-  },
+    address: 'Plot no 60, near wild crest, Nawabganj, Mahnora, Uttar Pradesh 209859',
+    stay: '.',
+    map: 'https://maps.app.goo.gl/u5b9zqr5n1J3mnBSA',
+    concierge: 'tel:+919450375503',
+  }
 ]
