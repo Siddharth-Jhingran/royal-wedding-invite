@@ -46,7 +46,7 @@ export default function CountdownTimer() {
       <SectionTitle
         kicker="The Awaited Hour"
         title="Countdown to the Pheras"
-        subtitle="Until we meet beneath the jasmine mandap at City Palace."
+        subtitle="Until we meet beneath the mandap at Inara Farms."
       />
       <div className="mx-auto grid max-w-4xl grid-cols-4 gap-1 sm:gap-4 md:grid-cols-4">
         {units.map((unit) => (

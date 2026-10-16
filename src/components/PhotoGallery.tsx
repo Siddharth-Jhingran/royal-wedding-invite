@@ -30,12 +30,12 @@ export default function PhotoGallery() {
   return (
     <section id="gallery" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
       <SectionTitle
-        kicker="Darshan"
+        kicker="A Glimpse of Our Journey"
         title="A Gallery of Gold & Marigold"
-        subtitle="Portraits, haldi laughter, and rituals framed in antique gold."
+        subtitle="Portraits, laughter, and rituals framed in antique gold."
       />
 
-      <div className="mb-8 flex flex-wrap justify-center gap-2">
+      {/* <div className="mb-8 flex flex-wrap justify-center gap-2">
         {FILTERS.map((item) => (
           <button
             key={item}
@@ -53,7 +53,7 @@ export default function PhotoGallery() {
             {item}
           </button>
         ))}
-      </div>
+      </div> */}
 
       <div
         className={`gallery-marquee mx-auto max-w-6xl ${active !== null ? 'is-paused' : ''}`}
