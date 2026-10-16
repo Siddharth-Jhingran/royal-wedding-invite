@@ -102,12 +102,17 @@ export const GALLERY = [
     category: 'Haldi' as GalleryCategory,
   },
   {
-    src: 'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-16%20at%204.21.09%20PM.jpeg',
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%204.21.09%20PM.jpeg?updatedAt=1792175587628',
     alt: 'Wedding rituals with floral garlands',
     category: 'Rituals' as GalleryCategory,
   },
   {
-    src: 'https://ik.imagekit.io/wbbydpgjl/photo_2.jpeg',
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.27%20PM%20(1).jpeg?updatedAt=1792175587901',
+    alt: 'Bride and groom ring ceremony with family',
+    category: 'Rituals' as GalleryCategory,
+  },
+  {
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/photo_2.jpeg?updatedAt=1792175587581',
     alt: 'Couple portrait in palace courtyard',
     category: 'Portraits' as GalleryCategory,
   },
