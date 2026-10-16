@@ -1,18 +1,11 @@
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
-import { GALLERY, type GalleryCategory } from '../data/wedding'
+import { ArrowLeft, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { GALLERY } from '../data/wedding'
 import { GoldCornerFrame, SectionTitle } from './Ornaments'
 
-const FILTERS: GalleryCategory[] = ['All', 'Haldi', 'Rituals', 'Portraits']
-
 export default function PhotoGallery() {
-  const [filter, setFilter] = useState<GalleryCategory>('All')
   const [active, setActive] = useState<number | null>(null)
-
-  const photos = useMemo(
-    () => (filter === 'All' ? GALLERY : GALLERY.filter((item) => item.category === filter)),
-    [filter],
-  )
+  const photos = GALLERY
 
   useEffect(() => {
     if (active === null) return
@@ -34,26 +27,6 @@ export default function PhotoGallery() {
         title="A Gallery of Gold & Marigold"
         subtitle="Portraits, laughter, and rituals framed in antique gold."
       />
-
-      {/* <div className="mb-8 flex flex-wrap justify-center gap-2">
-        {FILTERS.map((item) => (
-          <button
-            key={item}
-            type="button"
-            onClick={() => {
-              setFilter(item)
-              setActive(null)
-            }}
-            className={`min-h-11 rounded-full border px-3 py-2 font-body text-[10px] tracking-[0.12em] uppercase transition sm:px-4 sm:text-[11px] sm:tracking-[0.2em] ${
-              filter === item
-                ? 'border-gold bg-gold text-maroon'
-                : 'border-gold/40 text-gold hover:border-gold'
-            }`}
-          >
-            {item}
-          </button>
-        ))}
-      </div> */}
 
       <div
         className={`gallery-marquee mx-auto max-w-6xl ${active !== null ? 'is-paused' : ''}`}
@@ -95,7 +68,16 @@ export default function PhotoGallery() {
         <div className="fixed inset-0 z-[70] flex items-center justify-center bg-maroon-deep/90 p-4 backdrop-blur-sm">
           <button
             type="button"
-            className="absolute top-5 right-5 text-gold"
+            className="absolute top-4 left-4 z-10 inline-flex min-h-11 items-center gap-2 rounded-full border border-gold/70 bg-maroon px-4 py-2 font-body text-sm text-gold shadow-lg transition hover:bg-maroon-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:top-5 sm:left-5"
+            onClick={() => setActive(null)}
+            aria-label="Back to gallery"
+          >
+            <ArrowLeft size={18} aria-hidden="true" />
+            <span>Back to gallery</span>
+          </button>
+          <button
+            type="button"
+            className="absolute top-20 right-5 z-10 rounded-full border border-gold/70 bg-maroon p-2 text-gold shadow-lg transition hover:bg-maroon-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             onClick={() => setActive(null)}
             aria-label="Close lightbox"
           >

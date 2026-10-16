@@ -17,7 +17,8 @@ import { useInvitationMusic } from './hooks/useInvitationMusic'
 export default function App() {
   const [opened, setOpened] = useState(false)
   const [musicOn, setMusicOn] = useState(false)
-  const audioRef = useInvitationMusic(musicOn)
+  const [videoPlaying, setVideoPlaying] = useState(false)
+  const audioRef = useInvitationMusic(musicOn && !videoPlaying)
 
   const openInvitation = () => {
     setOpened(true)
@@ -31,7 +32,10 @@ export default function App() {
 
       {opened ? (
         <>
-          <Navbar musicOn={musicOn} onToggleMusic={() => setMusicOn((value) => !value)} />
+          <Navbar
+            musicOn={musicOn && !videoPlaying}
+            onToggleMusic={() => setMusicOn((value) => !value)}
+          />
           <main className="relative pt-16">
             <div className="pointer-events-none fixed inset-0 z-0">
               <div 
@@ -44,7 +48,7 @@ export default function App() {
               <CountdownTimer />
               <PhotoGallery />
               {/* <StoryTimeline /> */}
-              <WeddingVideo />
+              <WeddingVideo onPlaybackChange={setVideoPlaying} />
               <DestinationGuide />
               {/* <RsvpSection /> */}
               <Footer />

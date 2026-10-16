@@ -1,22 +1,51 @@
 import { Pause, Play } from 'lucide-react'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { WEDDING } from '../data/wedding'
 import { GoldCornerFrame, SectionTitle } from './Ornaments'
 
-export default function WeddingVideo() {
+interface WeddingVideoProps {
+  onPlaybackChange: (playing: boolean) => void
+}
+
+export default function WeddingVideo({ onPlaybackChange }: WeddingVideoProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [playing, setPlaying] = useState(false)
   const [useIframe, setUseIframe] = useState(false)
+  const [playbackError, setPlaybackError] = useState(false)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video || useIframe) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0]
+        if (!entry || !video) return
+
+        if (entry.intersectionRatio >= 0.8 && video.paused && !video.ended) {
+          void video.play().catch(() => setPlaybackError(true))
+        } else if (entry.intersectionRatio < 0.8 && !video.paused) {
+          video.pause()
+        }
+      },
+      { threshold: [0, 0.8] },
+    )
+
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [useIframe])
 
   const toggle = async () => {
     const video = videoRef.current
     if (!video) return
     if (video.paused) {
-      await video.play()
-      setPlaying(true)
+      try {
+        await video.play()
+      } catch {
+        setPlaybackError(true)
+      }
     } else {
       video.pause()
-      setPlaying(false)
     }
   }
 
@@ -30,10 +59,9 @@ export default function WeddingVideo() {
 
       <div className="ornate-panel relative mx-auto max-w-2xl max-h-screen overflow-hidden rounded-sm p-3 md:p-4">
         <GoldCornerFrame />
-        <div 
+        <div
         className="
         relative
-        aspect-auto 
         overflow-hidden 
         flex 
         items-center 
@@ -45,7 +73,7 @@ export default function WeddingVideo() {
           {useIframe ? (
             <iframe
               title="Wedding cinematic film"
-              className="w-full"
+              className="w-full "
               src="https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Video%202026-09-24%20at%209.10.23%20PM.mp4"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -54,14 +82,29 @@ export default function WeddingVideo() {
             <>
               <video
                 ref={videoRef}
-                className="h-full w-full"
-                
+                className="max-h-[90vh] w-full object-contain"
                 poster={WEDDING.filmPoster}
                 playsInline
                 controls={playing}
-                onError={() => setUseIframe(true)}
-                onPause={() => setPlaying(false)}
-                onPlay={() => setPlaying(true)}
+                onError={() => {
+                  setUseIframe(true)
+                  setPlaying(false)
+                  onPlaybackChange(false)
+                }}
+                onPause={() => {
+                  setPlaying(false)
+                  onPlaybackChange(false)
+                }}
+                onPlay={() => {
+                  setPlaying(true)
+                  setPlaybackError(false)
+                  onPlaybackChange(true)
+                }}
+                onEnded={() => {
+                  videoRef.current?.pause()
+                  setPlaying(false)
+                  onPlaybackChange(false)
+                }}
               >
                 <source src={WEDDING.filmSrc} type="video/mp4" />
               </video>
@@ -75,7 +118,7 @@ export default function WeddingVideo() {
                     <Play size={32} fill="currentColor" />
                   </span>
                   <span className="mt-4 font-body text-xs tracking-[0.3em] text-gold uppercase">
-                    Play the film
+                    {playbackError ? 'Tap to play the film' : 'Play the film'}
                   </span>
                 </button>
               ) : (

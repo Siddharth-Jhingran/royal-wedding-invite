@@ -14,7 +14,7 @@ export const WEDDING = {
   couplePhoto:
     'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-15%20at%201.43.03%20PM.jpeg',
   heroPhoto:
-    'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80',
+    'https://ik.imagekit.io/wbbydpgjl/photo_1.jpeg',
   filmPoster:
     'https://ik.imagekit.io/wbbydpgjl/IMG_0878.PNG',
   filmSrc:
@@ -92,7 +92,7 @@ export type GalleryCategory = 'All' | 'Haldi' | 'Rituals' | 'Portraits'
 
 export const GALLERY = [
   {
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/photo_1.jpeg',
     alt: 'Bride and groom in traditional attire',
     category: 'Portraits' as GalleryCategory,
   },
@@ -102,12 +102,12 @@ export const GALLERY = [
     category: 'Haldi' as GalleryCategory,
   },
   {
-    src: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-16%20at%204.21.09%20PM.jpeg',
     alt: 'Wedding rituals with floral garlands',
     category: 'Rituals' as GalleryCategory,
   },
   {
-    src: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/photo_2.jpeg',
     alt: 'Couple portrait in palace courtyard',
     category: 'Portraits' as GalleryCategory,
   },
