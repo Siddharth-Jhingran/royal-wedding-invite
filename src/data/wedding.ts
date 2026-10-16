@@ -12,23 +12,23 @@ export const WEDDING = {
   targetDate: '2026-11-21T19:00:00+05:30',
   blessing: 'Shubh Vivah',
   couplePhoto:
-    'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-15%20at%201.43.03%20PM.jpeg',
+    'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-15%20at%201.43.03%20PM.jpeg?updatedAt=1792175912288',
   heroPhoto:
     'https://ik.imagekit.io/wbbydpgjl/photo_1.jpeg',
   filmPoster:
-    'https://ik.imagekit.io/wbbydpgjl/IMG_0878.PNG',
+    'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/IMG_0878.PNG?updatedAt=1792175587561',
   filmSrc:
     'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Video%202026-09-24%20at%209.10.23%20PM.mp4',
   audioSrc:
-    'https://ik.imagekit.io/wbbydpgjl/Inkem%20inkem%20wedding%20card.mp3.mpeg',
+    'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/Inkem%20inkem%20wedding%20card.mp3.mpeg?updatedAt=1792175913564',
 }
 
 export const NAV_LINKS = [
   { href: '#date', label: 'Date' },
   { href: '#countdown', label: 'Countdown' },
-  { href: '#story', label: 'Story' },
+  // { href: '#story', label: 'Story' },
   { href: '#gallery', label: 'Gallery' },
-  { href: '#film', label: 'Film' },
+  { href: '#film', label: 'Invitation Film' },
   { href: '#destination', label: 'Venues' },
   { href: '#rsvp', label: 'RSVP' },
 ] as const
@@ -92,12 +92,12 @@ export type GalleryCategory = 'All' | 'Haldi' | 'Rituals' | 'Portraits'
 
 export const GALLERY = [
   {
-    src: 'https://ik.imagekit.io/wbbydpgjl/photo_1.jpeg',
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.28%20PM%20(1).jpeg?updatedAt=1792175587889',
     alt: 'Bride and groom in traditional attire',
     category: 'Portraits' as GalleryCategory,
   },
   {
-    src: 'https://images.unsplash.com/photo-1587271636175-90d58cdad458?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.28%20PM%20(2).jpeg?updatedAt=1792175588064',
     alt: 'Haldi ceremony with turmeric and flowers',
     category: 'Haldi' as GalleryCategory,
   },
@@ -112,22 +112,22 @@ export const GALLERY = [
     category: 'Portraits' as GalleryCategory,
   },
   {
-    src: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9d2d9?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.27%20PM.jpeg?updatedAt=1792175587991',
     alt: 'Bridal jewellery and marigold details',
     category: 'Rituals' as GalleryCategory,
   },
   {
-    src: 'https://images.unsplash.com/photo-1520854221256-17451cc330bf?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.26%20PM%20(2).jpeg?updatedAt=1792175587698',
     alt: 'Wedding celebration with family',
     category: 'Rituals' as GalleryCategory,
   },
   {
-    src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/photo_1.jpeg',
     alt: 'Romantic couple portrait at dusk',
     category: 'Portraits' as GalleryCategory,
   },
   {
-    src: 'https://images.unsplash.com/photo-1583939411023-14754922c800?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.28%20PM%20(3).jpeg?updatedAt=1792175588810',
     alt: 'Turmeric and rose petals for Haldi',
     category: 'Haldi' as GalleryCategory,
   },
@@ -138,9 +138,9 @@ export const DESTINATIONS = [
     name: 'Queens Banquet Hall',
     role: 'Tilak & Shagan Ceremony',
     image:
-      'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-15%20at%201.58.30%20PM.jpeg',
+      'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-15%20at%201.58.30%20PM.jpeg?updatedAt=1792175912081',
     address: 'GROUND FLOOR, B- 1/249, Kanpur Rd, MMD1, Sector H, LDA Colony, Lucknow, Uttar Pradesh 226012',
-    stay: 'Arrival by 7:00 PM.',
+    stay: '20 November 2026 - Arrival by 7:00 PM.',
     map: 'https://maps.app.goo.gl/u2gUePQ7JVJjq2Bx8',
     concierge: 'tel:+919450375503',
   },
@@ -150,7 +150,7 @@ export const DESTINATIONS = [
     image:
       'https://images.unsplash.com/photo-1564501049412-61c2a308c1aa?auto=format&fit=crop&w=1200&q=80',
     address: 'Plot no 60, near wild crest, Nawabganj, Mahnora, Uttar Pradesh 209859',
-    stay: '.',
+    stay: '21 November 2026 - Arrival by 7:00 PM.',
     map: 'https://maps.app.goo.gl/u5b9zqr5n1J3mnBSA',
     concierge: 'tel:+919450375503',
   }

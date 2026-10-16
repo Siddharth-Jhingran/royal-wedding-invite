@@ -6,7 +6,7 @@ export default function DestinationGuide() {
   return (
     <section id="destination" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
       <SectionTitle
-        kicker="Udaipur Awaits"
+        kicker="Lucknow Awaits"
         title="Palaces & Guest Stays"
         subtitle="A constellation of lakeside palaces. Our concierge will help you arrive in splendour."
       />
