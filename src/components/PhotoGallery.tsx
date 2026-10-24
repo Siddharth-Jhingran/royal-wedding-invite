@@ -1,4 +1,4 @@
-import { ArrowLeft, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { GALLERY } from '../data/wedding'
 import { GoldCornerFrame, SectionTitle } from './Ornaments'
