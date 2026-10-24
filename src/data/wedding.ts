@@ -93,47 +93,48 @@ export type GalleryCategory = 'All' | 'Haldi' | 'Rituals' | 'Portraits'
 export const GALLERY = [
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.28%20PM%20(1).jpeg?updatedAt=1792175587889',
-    alt: 'Bride and groom in traditional attire',
+    alt: '',
     category: 'Portraits' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.28%20PM%20(2).jpeg?updatedAt=1792175588064',
-    alt: 'Haldi ceremony with turmeric and flowers',
+    alt: '',
     category: 'Haldi' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%204.21.09%20PM.jpeg?updatedAt=1792175587628',
-    alt: 'Wedding rituals with floral garlands',
+    alt: '',
     category: 'Rituals' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.27%20PM%20(1).jpeg?updatedAt=1792175587901',
-    alt: 'Bride and groom ring ceremony with family',
+    alt: '',
+
     category: 'Rituals' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/photo_2.jpeg?updatedAt=1792175587581',
-    alt: 'Couple portrait in palace courtyard',
+    alt: '',
     category: 'Portraits' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.27%20PM.jpeg?updatedAt=1792175587991',
-    alt: 'Bridal jewellery and marigold details',
+    alt: '',
     category: 'Rituals' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.26%20PM%20(2).jpeg?updatedAt=1792175587698',
-    alt: 'Wedding celebration with family',
+    alt: '',
     category: 'Rituals' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/photo_1.jpeg',
-    alt: 'Romantic couple portrait at dusk',
+    alt: '',
     category: 'Portraits' as GalleryCategory,
   },
   {
     src: 'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-16%20at%2010.26.28%20PM%20(3).jpeg?updatedAt=1792175588810',
-    alt: 'Turmeric and rose petals for Haldi',
+    alt: '',
     category: 'Haldi' as GalleryCategory,
   },
 ]
@@ -153,7 +154,7 @@ export const DESTINATIONS = [
     name: 'Inara Farms',
     role: 'Wedding Ceremony & Reception',
     image:
-      'https://images.unsplash.com/photo-1564501049412-61c2a308c1aa?auto=format&fit=crop&w=1200&q=80',
+      'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-24%20at%2011.18.39%20PM.jpeg',
     address: 'Plot no 60, near wild crest, Nawabganj, Mahnora, Uttar Pradesh 209859',
     stay: '21 November 2026 - Arrival by 7:00 PM.',
     map: 'https://maps.app.goo.gl/u5b9zqr5n1J3mnBSA',

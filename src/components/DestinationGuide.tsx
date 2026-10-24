@@ -7,8 +7,8 @@ export default function DestinationGuide() {
     <section id="destination" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
       <SectionTitle
         kicker="Lucknow Awaits"
-        title="Palaces & Guest Stays"
-        subtitle="A constellation of lakeside palaces. Our concierge will help you arrive in splendour."
+        title="The Wedding Venue"
+        subtitle="A beautiful destination for a day filled with love, laughter, and lifelong memories."
       />
 
       <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">

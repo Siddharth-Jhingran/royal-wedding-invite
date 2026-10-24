@@ -7,7 +7,7 @@ import Navbar from './components/Navbar'
 import MandalaWatermark from './components/Ornaments'
 import PetalField from './components/PetalField'
 import PhotoGallery from './components/PhotoGallery'
-// import RsvpSection from './components/RsvpSection'
+import RsvpSection from './components/RsvpSection'
 import ScratchCardDate from './components/ScratchCardDate'
 // import StoryTimeline from './components/StoryTimeline'
 import WeddingVideo from './components/WeddingVideo'
@@ -50,7 +50,7 @@ export default function App() {
               {/* <StoryTimeline /> */}
               <WeddingVideo onPlaybackChange={setVideoPlaying} />
               <DestinationGuide />
-              {/* <RsvpSection /> */}
+              <RsvpSection />
               <Footer />
             </div>
           </main>

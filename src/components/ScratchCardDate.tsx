@@ -1,5 +1,5 @@
 import confetti from 'canvas-confetti'
-import { Sparkles } from 'lucide-react'
+import { ChevronDown, Sparkles } from 'lucide-react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { WEDDING } from '../data/wedding'
 import { GoldCornerFrame, SectionTitle } from './Ornaments'
@@ -118,7 +118,8 @@ export default function ScratchCardDate() {
       <SectionTitle
         kicker="The Golden Card"
         title="Scratch to Reveal Our Date"
-        subtitle="Brush away the antique foil — by fingertip or mouse — and let the muhurat shine through."
+        subtitle="Brush away the antique foil - by fingertip or mouse - and let the muhurat shine through. "
+      
       />
 
       <div className="relative mx-auto max-w-3xl">
@@ -182,6 +183,15 @@ export default function ScratchCardDate() {
           </button>
         </div>
       </div>
+
+      <a
+        href="#countdown"
+        className="mx-auto mt-10 flex w-fit flex-col items-center gap-1 text-gold/75 transition hover:text-gold sm:mt-12"
+        aria-label="Scroll down to the countdown"
+      >
+        <span className="font-body text-[10px] tracking-[0.25em] uppercase">Scroll to explore</span>
+        <ChevronDown size={18} className="animate-bounce" aria-hidden="true" />
+      </a>
     </section>
   )
 }

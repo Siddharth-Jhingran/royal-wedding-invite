@@ -5,7 +5,7 @@ export default function Footer() {
   const share = async () => {
     const payload = {
       title: `${WEDDING.bride} & ${WEDDING.groom} — Wedding Invitation`,
-      text: `You are invited to a royal wedding in Udaipur. ${WEDDING.hashtag}`,
+      text: `You are invited to a royal wedding in Lucknow. ${WEDDING.hashtag}`,
       url: window.location.href,
     }
     try {
@@ -37,6 +37,9 @@ export default function Footer() {
       </button>
       <p className="mt-8 font-body text-[11px] tracking-[0.18em] text-ivory/45 uppercase">
         © {new Date().getFullYear()} {WEDDING.families} · {WEDDING.hashtag}
+      </p>
+      <p className="mt-2 font-body text-[11px] tracking-[0.18em] text-ivory/45 uppercase">
+        created with ❤️ by <a href="https://www.instagram.com/sid_jhingran?obrf=MTdmbHJhMGIzOGRkcQ==" className="underline">Siddharth Jhingran</a>
       </p>
     </footer>
   )

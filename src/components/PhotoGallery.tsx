@@ -23,7 +23,7 @@ export default function PhotoGallery() {
   return (
     <section id="gallery" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
       <SectionTitle
-        kicker="A Glimpse of Our Journey"
+        kicker="A Glimpse of Our Engagement"
         title="A Gallery of Gold & Marigold"
         subtitle="Portraits, laughter, and rituals framed in antique gold."
       />
@@ -68,28 +68,28 @@ export default function PhotoGallery() {
         <div className="fixed inset-0 z-[70] flex items-center justify-center bg-maroon-deep/90 p-4 backdrop-blur-sm">
           <button
             type="button"
-            className="absolute top-4 left-4 z-10 inline-flex min-h-11 items-center gap-2 rounded-full border border-gold/70 bg-maroon px-4 py-2 font-body text-sm text-gold shadow-lg transition hover:bg-maroon-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:top-5 sm:left-5"
+            className="absolute top-4 mt-15 left-4 z-10 inline-flex min-h-11 items-center gap-2 rounded-full border border-gold/70 bg-maroon px-4 py-2 font-body text-sm text-gold shadow-lg transition hover:bg-maroon-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:top-5 sm:left-5"
             onClick={() => setActive(null)}
             aria-label="Back to gallery"
           >
             <ArrowLeft size={18} aria-hidden="true" />
             <span>Back to gallery</span>
           </button>
-          <button
+          {/* <button
             type="button"
             className="absolute top-20 right-5 z-10 rounded-full border border-gold/70 bg-maroon p-2 text-gold shadow-lg transition hover:bg-maroon-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             onClick={() => setActive(null)}
             aria-label="Close lightbox"
           >
             <X size={28} />
-          </button>
+          </button> */}
           <button
             type="button"
-            className="absolute left-3 text-gold md:left-8"
+            className="absolute -left-1 text-gold md:left-8 z-10"
             onClick={() => setActive((i) => (i === null ? i : (i - 1 + photos.length) % photos.length))}
             aria-label="Previous photo"
           >
-            <ChevronLeft size={36} />
+            <ChevronLeft size={46} />
           </button>
           <div className="relative max-h-[82vh] w-full max-w-4xl p-3">
             <GoldCornerFrame />
@@ -102,11 +102,11 @@ export default function PhotoGallery() {
           </div>
           <button
             type="button"
-            className="absolute right-3 text-gold md:right-8"
+            className="absolute -right-1 text-gold md:right-8"
             onClick={() => setActive((i) => (i === null ? i : (i + 1) % photos.length))}
             aria-label="Next photo"
           >
-            <ChevronRight size={36} />
+            <ChevronRight size={46} />
           </button>
         </div>
       ) : null}
