@@ -3,6 +3,7 @@ import CountdownTimer from './components/CountdownTimer'
 import DestinationGuide from './components/DestinationGuide'
 import Footer from './components/Footer'
 import HeroEnvelope from './components/HeroEnvelope'
+import type { Language } from './data/translations'
 import Navbar from './components/Navbar'
 import MandalaWatermark from './components/Ornaments'
 import PetalField from './components/PetalField'
@@ -16,6 +17,7 @@ import { useInvitationMusic } from './hooks/useInvitationMusic'
 
 export default function App() {
   const [opened, setOpened] = useState(false)
+  const [language, setLanguage] = useState<Language>('en')
   const [musicOn, setMusicOn] = useState(false)
   const [videoPlaying, setVideoPlaying] = useState(false)
   const audioRef = useInvitationMusic(musicOn && !videoPlaying)
@@ -26,13 +28,21 @@ export default function App() {
   }
 
   return (
-    <div className="relative min-h-svh overflow-x-hidden bg-maroon font-body text-ivory">
+    <div lang={language} className="relative min-h-svh overflow-x-hidden bg-maroon font-body text-ivory">
       <audio ref={audioRef} loop preload="none" src={WEDDING.audioSrc} />
-      {!opened ? <HeroEnvelope onOpen={openInvitation} /> : null}
+      {!opened ? (
+        <HeroEnvelope
+          language={language}
+          onToggleLanguage={() => setLanguage((current) => (current === 'en' ? 'hi' : 'en'))}
+          onOpen={openInvitation}
+        />
+      ) : null}
 
       {opened ? (
         <>
           <Navbar
+            language={language}
+            onToggleLanguage={() => setLanguage((current) => (current === 'en' ? 'hi' : 'en'))}
             musicOn={musicOn && !videoPlaying}
             onToggleMusic={() => setMusicOn((value) => !value)}
           />
@@ -44,14 +54,14 @@ export default function App() {
               <PetalField count={16} />
             </div>
             <div className="relative z-10">
-              <ScratchCardDate />
-              <CountdownTimer />
-              <PhotoGallery />
+              <ScratchCardDate language={language} />
+              <CountdownTimer language={language} />
+              <PhotoGallery language={language} />
               {/* <StoryTimeline /> */}
-              <WeddingVideo onPlaybackChange={setVideoPlaying} />
-              <DestinationGuide />
-              <RsvpSection />
-              <Footer />
+              <WeddingVideo language={language} onPlaybackChange={setVideoPlaying} />
+              <DestinationGuide language={language} />
+              <RsvpSection language={language} />
+              <Footer language={language} />
             </div>
           </main>
         </>

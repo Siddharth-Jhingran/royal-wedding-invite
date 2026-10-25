@@ -142,11 +142,11 @@ export const GALLERY = [
 export const DESTINATIONS = [
   {
     name: 'Queens Banquet Hall',
-    role: 'Tilak & Shagan Ceremony',
+    role: 'Godbharai Ceremony',
     image:
       'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-15%20at%201.58.30%20PM.jpeg?updatedAt=1792175912081',
     address: 'GROUND FLOOR, B- 1/249, Kanpur Rd, MMD1, Sector H, LDA Colony, Lucknow, Uttar Pradesh 226012',
-    stay: '20 November 2026 - Arrival by 7:00 PM.',
+    stay: '20 November 2026.',
     map: 'https://maps.app.goo.gl/u2gUePQ7JVJjq2Bx8',
     concierge: 'tel:+919450375503',
   },
@@ -156,7 +156,7 @@ export const DESTINATIONS = [
     image:
       'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-24%20at%2011.18.39%20PM.jpeg',
     address: 'Plot no 60, near wild crest, Nawabganj, Mahnora, Uttar Pradesh 209859',
-    stay: '21 November 2026 - Arrival by 7:00 PM.',
+    stay: '21 November 2026.',
     map: 'https://maps.app.goo.gl/u5b9zqr5n1J3mnBSA',
     concierge: 'tel:+919450375503',
   }

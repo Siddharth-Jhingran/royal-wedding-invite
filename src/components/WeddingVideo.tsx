@@ -1,13 +1,17 @@
 import { Pause, Play } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { WEDDING } from '../data/wedding'
+import type { Language } from '../data/translations'
+import { COPY } from '../data/translations'
 import { GoldCornerFrame, SectionTitle } from './Ornaments'
 
 interface WeddingVideoProps {
+  language: Language
   onPlaybackChange: (playing: boolean) => void
 }
 
-export default function WeddingVideo({ onPlaybackChange }: WeddingVideoProps) {
+export default function WeddingVideo({ language, onPlaybackChange }: WeddingVideoProps) {
+  const copy = COPY[language].video
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [playing, setPlaying] = useState(false)
   const [useIframe, setUseIframe] = useState(false)
@@ -52,9 +56,9 @@ export default function WeddingVideo({ onPlaybackChange }: WeddingVideoProps) {
   return (
     <section id="film" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
       <SectionTitle
-        kicker="Cinematic Blessing"
-        title="The Wedding Film"
-        subtitle="A glimpse of palaces, pheras, and the music that will carry us down the aisle."
+        kicker={copy.kicker}
+        title={copy.title}
+        subtitle={copy.subtitle}
       />
 
       <div className="ornate-panel relative mx-auto max-w-2xl max-h-screen overflow-hidden rounded-sm p-3 md:p-4">
@@ -72,7 +76,7 @@ export default function WeddingVideo({ onPlaybackChange }: WeddingVideoProps) {
 
           {useIframe ? (
             <iframe
-              title="Wedding cinematic film"
+              title={copy.titleAttribute}
               className="w-full "
               src="https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Video%202026-09-24%20at%209.10.23%20PM.mp4"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -118,7 +122,7 @@ export default function WeddingVideo({ onPlaybackChange }: WeddingVideoProps) {
                     <Play size={32} fill="currentColor" />
                   </span>
                   <span className="mt-4 font-body text-xs tracking-[0.3em] text-gold uppercase">
-                    {playbackError ? 'Tap to play the film' : 'Play the film'}
+                    {playbackError ? copy.tapToPlay : copy.play}
                   </span>
                 </button>
               ) : (
@@ -126,7 +130,7 @@ export default function WeddingVideo({ onPlaybackChange }: WeddingVideoProps) {
                   type="button"
                   onClick={() => void toggle()}
                   className="absolute top-4 right-4 rounded-full border border-gold/50 bg-maroon/70 p-2 text-gold"
-                  aria-label="Pause film"
+                  aria-label={copy.pause}
                 >
                   <Pause size={16} />
                 </button>

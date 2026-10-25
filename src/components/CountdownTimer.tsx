@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { WEDDING } from '../data/wedding'
+import type { Language } from '../data/translations'
+import { COPY } from '../data/translations'
 import { SectionTitle } from './Ornaments'
 
 type TimeLeft = {
@@ -25,7 +27,12 @@ function getTimeLeft(target: number): TimeLeft {
   }
 }
 
-export default function CountdownTimer() {
+type CountdownTimerProps = {
+  language: Language
+}
+
+export default function CountdownTimer({ language }: CountdownTimerProps) {
+  const copy = COPY[language].countdown
   const target = useMemo(() => new Date(WEDDING.targetDate).getTime(), [])
   const [time, setTime] = useState<TimeLeft>(() => getTimeLeft(target))
 
@@ -35,18 +42,18 @@ export default function CountdownTimer() {
   }, [target])
 
   const units: { label: string; value: string }[] = [
-    { label: 'Days', value: time.days },
-    { label: 'Hours', value: time.hours },
-    { label: 'Minutes', value: time.minutes },
-    { label: 'Seconds', value: time.seconds },
+    { label: copy.units[0], value: time.days },
+    { label: copy.units[1], value: time.hours },
+    { label: copy.units[2], value: time.minutes },
+    { label: copy.units[3], value: time.seconds },
   ]
 
   return (
     <section id="countdown" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
       <SectionTitle
-        kicker="The Awaited Hour"
-        title="Countdown to the Pheras"
-        subtitle="Until we meet beneath the mandap at Inara Farms."
+        kicker={copy.kicker}
+        title={copy.title}
+        subtitle={copy.subtitle}
       />
       <div className="mx-auto grid max-w-4xl grid-cols-4 gap-1 sm:gap-4 md:grid-cols-4">
         {units.map((unit) => (

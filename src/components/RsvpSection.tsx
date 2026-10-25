@@ -1,27 +1,29 @@
 import { SectionTitle } from './Ornaments'
+import type { Language } from '../data/translations'
+import { COPY } from '../data/translations'
 
+type RsvpSectionProps = {
+  language: Language
+}
 
-export default function RsvpSection() {
-
+export default function RsvpSection({ language }: RsvpSectionProps) {
+  const copy = COPY[language].rsvp
 
   return (
     <section id="rsvp" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
       <SectionTitle
-        kicker="A New Beginning,
-Blessed by Your Love"
-title=""
-subtitle="Your blessings will make this occasion even more special. We warmly await the joy of celebrating together."
+        kicker={copy.kicker}
+        title=""
+        subtitle={copy.subtitle}
       />
-      <SectionTitle 
-
-      kicker="Humbly Solicited By"
-      title={"Deepak Jhingran\nJyoti Jhingran"} 
+      <SectionTitle
+        kicker={copy.requestedBy}
+        title={language === 'hi' ? 'दीपक झींगरन\nज्योति झींगरन' : 'Deepak Jhingran\nJyoti Jhingran'}
       />
-      <SectionTitle 
-      kicker="Awaiting Your Gracious Presence"
-      title="The Entire Jhingran Family"
+      <SectionTitle
+        kicker={copy.presence}
+        title={copy.family}
       />
-     
     </section>
   )
 }

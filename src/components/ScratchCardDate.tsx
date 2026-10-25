@@ -2,11 +2,18 @@ import confetti from 'canvas-confetti'
 import { ChevronDown, Sparkles } from 'lucide-react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { WEDDING } from '../data/wedding'
+import type { Language } from '../data/translations'
+import { COPY } from '../data/translations'
 import { GoldCornerFrame, SectionTitle } from './Ornaments'
 
 const REVEAL_AT = 0.48
 
-export default function ScratchCardDate() {
+type ScratchCardDateProps = {
+  language: Language
+}
+
+export default function ScratchCardDate({ language }: ScratchCardDateProps) {
+  const copy = COPY[language].date
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const scratching = useRef(false)
   const revealedRef = useRef(false)
@@ -47,11 +54,11 @@ export default function ScratchCardDate() {
     ctx.fillStyle = '#26070B'
     ctx.font = '600 18px Poppins, sans-serif'
     ctx.textAlign = 'center'
-    ctx.fillText('SCRATCH THE GOLD FOIL', width / 2, height / 2 - 8)
+    ctx.fillText(copy.scratch, width / 2, height / 2 - 8)
     ctx.font = '28px Great Vibes, cursive'
     ctx.fillStyle = '#3d1018'
-    ctx.fillText('to reveal the muhurat', width / 2, height / 2 + 28)
-  }, [])
+    ctx.fillText(copy.reveal, width / 2, height / 2 + 28)
+  }, [copy.reveal, copy.scratch])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -116,10 +123,9 @@ export default function ScratchCardDate() {
   return (
     <section id="date" className="relative scroll-mt-24 px-4 py-14 sm:py-20 md:py-24">
       <SectionTitle
-        kicker="The Golden Card"
-        title="Scratch to Reveal Our Date"
-        subtitle="Brush away the antique foil - by fingertip or mouse - and let the muhurat shine through. "
-      
+        kicker={copy.kicker}
+        title={copy.title}
+        subtitle={copy.subtitle}
       />
 
       <div className="relative mx-auto max-w-3xl">
@@ -134,16 +140,16 @@ export default function ScratchCardDate() {
             <div className="absolute inset-0 bg-gradient-to-t from-maroon/80 via-transparent to-maroon/20" />
             <div className="absolute inset-x-0 bottom-0 p-4 text-center sm:p-6 md:p-10">
               <p className="font-body text-[10px] tracking-[0.25em] text-gold uppercase sm:text-xs sm:tracking-[0.35em]">
-                Save the date
+                {copy.save}
               </p>
               <p className="font-script text-4xl leading-tight text-ivory sm:text-5xl md:text-6xl">
                 {WEDDING.bride} & {WEDDING.groom}
               </p>
               <p className="mt-2 font-display text-xl text-gold-light sm:text-2xl md:text-4xl">
-                {WEDDING.dateLabel}
+                {copy.date}
               </p>
-              <p className="mt-1 font-body text-xs text-ivory/80 sm:text-sm">{WEDDING.timeLabel}</p>
-              <p className="mt-2 font-display text-sm italic text-ivory/70 sm:text-base">{WEDDING.venueName}</p>
+              <p className="mt-1 font-body text-xs text-ivory/80 sm:text-sm">{copy.time}</p>
+              <p className="mt-2 font-display text-sm italic text-ivory/70 sm:text-base">{copy.venue}</p>
             </div>
             <canvas
               ref={canvasRef}
@@ -171,7 +177,7 @@ export default function ScratchCardDate() {
 
         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <div className="font-body text-xs tracking-[0.2em] text-gold uppercase">
-            Foil lifted {Math.min(100, Math.round(progress * 100))}%
+            {copy.foilLifted} {Math.min(100, Math.round(progress * 100))}%
           </div>
           <button
             type="button"
@@ -179,7 +185,7 @@ export default function ScratchCardDate() {
             className="inline-flex items-center gap-2 rounded-full border border-gold px-5 py-2 font-body text-xs tracking-[0.2em] text-gold uppercase transition hover:bg-gold hover:text-maroon"
           >
             <Sparkles size={14} />
-            Instant reveal
+            {copy.instantReveal}
           </button>
         </div>
       </div>
@@ -187,9 +193,9 @@ export default function ScratchCardDate() {
       <a
         href="#countdown"
         className="mx-auto mt-10 flex w-fit flex-col items-center gap-1 text-gold/75 transition hover:text-gold sm:mt-12"
-        aria-label="Scroll down to the countdown"
+        aria-label={copy.scrollLabel}
       >
-        <span className="font-body text-[10px] tracking-[0.25em] uppercase">Scroll to explore</span>
+        <span className="font-body text-[10px] tracking-[0.25em] uppercase">{copy.scroll}</span>
         <ChevronDown size={18} className="animate-bounce" aria-hidden="true" />
       </a>
     </section>
