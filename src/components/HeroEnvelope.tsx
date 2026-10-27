@@ -96,9 +96,10 @@ export default function HeroEnvelope({
             className="wax-seal absolute left-1/2 top-[46%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-gold-light bg-gradient-to-b from-[#8b1e2d] to-[#4a0d16] text-gold sm:h-20 sm:w-20"
             aria-label={copy.breakSeal}
           >
-            <span className="font-script text-3xl">U</span>
-            <span className="font-display text-[10px]">&</span>
-            <span className="font-script text-3xl">A</span>
+            {/* <span className="font-script text-3xl">U</span> */}
+            {/* <span className="font-display text-[10px]">&</span> */}
+            {/* <span className="font-script text-3xl">A</span> */}
+            <img src="https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/wedding_logo_cropped-removebg-preview.png" alt="" />
           </button>
         </div>
 

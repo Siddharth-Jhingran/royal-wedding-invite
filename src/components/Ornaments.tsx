@@ -7,7 +7,7 @@ export default function MandalaWatermark() {
     
     >
       
-      <img src="https://ik.imagekit.io/wbbydpgjl/WhatsApp_Image_2026-10-16_at_4.38.00_PM-removebg-preview.png" alt="ye logo hai" />
+      <img src="https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/wedding_logo-removebg-preview.png" alt="ye logo hai" />
     </div>
   )
 }

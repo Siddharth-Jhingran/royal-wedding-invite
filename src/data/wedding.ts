@@ -3,13 +3,13 @@ export const WEDDING = {
   groom: 'Akshat',
   brideFull: 'Ujjwala Jhingran',
   groomFull: 'Akshat Joshi',
-  families: 'The Jhingran Families',
+  families: 'The Jhingran Family',
   hashtag: '#UjjwalaWedsAkshat',
   city: 'Lucknow',
   venueName: 'Inara Farms, Lucknow',
   dateLabel: '21 November 2026',
   timeLabel: '7:00 PM IST',
-  targetDate: '2026-11-21T19:00:00+05:30',
+  targetDate: '2026-11-21T19:00:00+06:30',
   blessing: 'Shubh Vivah',
   couplePhoto:
     'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-15%20at%201.43.03%20PM.jpeg?updatedAt=1792175912288',
@@ -18,7 +18,7 @@ export const WEDDING = {
   filmPoster:
     'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/IMG_0878.PNG?updatedAt=1792175587561',
   filmSrc:
-    'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Video%202026-09-24%20at%209.10.23%20PM.mp4',
+    'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/Ujjwala%20&%20Akshat%20wedding%20invitation.MOV',
   audioSrc:
     'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/Inkem%20inkem%20wedding%20card.mp3.mpeg?updatedAt=1792175913564',
 }
@@ -154,7 +154,7 @@ export const DESTINATIONS = [
     name: 'Inara Farms',
     role: 'Wedding Ceremony & Reception',
     image:
-      'https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Image%202026-10-24%20at%2011.18.39%20PM.jpeg',
+      'https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/WhatsApp%20Image%202026-10-24%20at%2011.18.39%20PM.jpeg?updatedAt=1793123349522',
     address: 'Plot no 60, near wild crest, Nawabganj, Mahnora, Uttar Pradesh 209859',
     stay: '21 November 2026.',
     map: 'https://maps.app.goo.gl/u5b9zqr5n1J3mnBSA',

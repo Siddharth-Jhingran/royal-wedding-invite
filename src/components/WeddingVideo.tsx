@@ -64,13 +64,7 @@ export default function WeddingVideo({ language, onPlaybackChange }: WeddingVide
       <div className="ornate-panel relative mx-auto max-w-2xl max-h-screen overflow-hidden rounded-sm p-3 md:p-4">
         <GoldCornerFrame />
         <div
-        className="
-        relative
-        overflow-hidden 
-        flex 
-        items-center 
-        justify-center  
-        bg-maroon-deep"
+        className="relative overflow-hidden flex items-center justify-center bg-maroon-deep/50"
         
         >
 
@@ -78,7 +72,7 @@ export default function WeddingVideo({ language, onPlaybackChange }: WeddingVide
             <iframe
               title={copy.titleAttribute}
               className="w-full "
-              src="https://ik.imagekit.io/wbbydpgjl/WhatsApp%20Video%202026-09-24%20at%209.10.23%20PM.mp4"
+              src="https://ik.imagekit.io/wbbydpgjl/Ujjwala%20Weds%20Akshat/Ujjwala%20&%20Akshat%20wedding%20invitation.MOV"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
