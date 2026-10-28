@@ -40,7 +40,7 @@ export function GoldCornerFrame({ className = '' }: GoldFrameProps) {
 
 type SectionTitleProps = {
   kicker: string
-  title: string
+  title: string | React.ReactNode
   subtitle?: string
   description?: string
 }

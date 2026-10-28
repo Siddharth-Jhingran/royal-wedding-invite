@@ -1,18 +1,21 @@
-import { MapPin, Phone, Sparkles } from 'lucide-react'
-import { DESTINATIONS } from '../data/wedding'
-import type { Language } from '../data/translations'
-import { COPY } from '../data/translations'
-import { GoldCornerFrame, SectionTitle } from './Ornaments'
+import { MapPin, Phone, Sparkles } from "lucide-react";
+import { DESTINATIONS } from "../data/wedding";
+import type { Language } from "../data/translations";
+import { COPY } from "../data/translations";
+import { GoldCornerFrame, SectionTitle } from "./Ornaments";
 
 type DestinationGuideProps = {
-  language: Language
-}
+  language: Language;
+};
 
 export default function DestinationGuide({ language }: DestinationGuideProps) {
-  const copy = COPY[language].destination
+  const copy = COPY[language].destination;
 
   return (
-    <section id="destination" className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20">
+    <section
+      id="destination"
+      className="relative scroll-mt-24 px-4 py-12 sm:py-16 md:py-20"
+    >
       <SectionTitle
         kicker={copy.kicker}
         title={copy.title}
@@ -21,17 +24,28 @@ export default function DestinationGuide({ language }: DestinationGuideProps) {
 
       <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
         {DESTINATIONS.map((place, index) => (
-          <article key={place.name} className="ornate-panel overflow-hidden rounded-sm">
-            <div className="relative h-52">
-              <img src={place.image} alt={place.name} className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-maroon via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-5">
-                <p className="font-body text-[10px] tracking-[0.25em] text-gold uppercase">
-                  {copy.roles[index]}
-                </p>
-                <h3 className="font-display text-2xl text-ivory">{place.name}</h3>
+          <article
+            key={place.name}
+            className="ornate-panel overflow-hidden rounded-sm"
+          >
+            <a href={place.map} target="_blank" rel="noreferrer">
+              <div className="relative h-52  ">
+                <img
+                  src={place.image}
+                  alt={place.name}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-maroon via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-5">
+                  <p className="font-body text-[10px] tracking-[0.25em] text-gold uppercase">
+                    {copy.roles[index]}
+                  </p>
+                  <h3 className="font-display text-2xl text-ivory">
+                    {place.name}
+                  </h3>
+                </div>
               </div>
-            </div>
+            </a>
             <div className="relative p-6">
               <GoldCornerFrame />
               <p className="font-body text-sm text-ivory/75">{place.address}</p>
@@ -62,5 +76,5 @@ export default function DestinationGuide({ language }: DestinationGuideProps) {
         ))}
       </div>
     </section>
-  )
+  );
 }
