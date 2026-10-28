@@ -21,7 +21,7 @@ export const COPY = {
     },
     date: {
       kicker: 'The Golden Card',
-      title: 'Scratch to Reveal Our Date',
+      title: 'Scratch to Reveal The Date',
       subtitle: 'Brush away the antique foil - by fingertip or mouse - and let the muhurat shine through.',
       scratch: 'SCRATCH THE GOLD FOIL',
       reveal: 'to reveal the muhurat',
@@ -41,7 +41,7 @@ export const COPY = {
       units: ['Days', 'Hours', 'Minutes', 'Seconds'],
     },
     gallery: {
-      kicker: 'A Glimpse of Our Engagement',
+      kicker: 'A Glimpse of The Engagement',
       title: 'A Gallery of Gold & Marigold',
       subtitle: 'Portraits, laughter, and rituals framed in antique gold.',
       label: 'Wedding photo gallery',
@@ -52,7 +52,7 @@ export const COPY = {
     },
     video: {
       kicker: 'Cinematic Blessing',
-      title: 'Our Wedding Invitation',
+      title: 'The Wedding Invitation',
       subtitle: 'Every Detail, Every Celebration, One Beautiful Story.',
       titleAttribute: 'Wedding cinematic film',
       tapToPlay: 'Tap to play the film',
@@ -124,7 +124,7 @@ export const COPY = {
       units: ['दिन', 'घंटे', 'मिनट', 'सेकंड'],
     },
     gallery: {
-      kicker: 'हमारे सगाई समारोह की झलक',
+      kicker: 'सगाई समारोह की झलक',
       title: 'सुनहरी यादों का चित्र-संग्रह',
       subtitle: 'चित्र, मुस्कानें और रस्में सुनहरी यादों में सजी हुईं।',
       label: 'विवाह समारोह का चित्र-संग्रह',
@@ -135,7 +135,7 @@ export const COPY = {
     },
     video: {
       kicker: 'मंगलमय चलचित्र',
-      title: 'हमारा विवाह निमंत्रण',
+      title: 'शुभ विवाह निमंत्रण',
       subtitle: 'हर विवरण, हर उत्सव, एक सुंदर कहानी मे।',
       titleAttribute: 'विवाह समारोह निमंत्रण',
       tapToPlay: 'फ़िल्म चलाने के लिए स्पर्श करें',
