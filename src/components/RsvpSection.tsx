@@ -26,10 +26,6 @@ export default function RsvpSection({ language }: RsvpSectionProps) {
         title={copy.family}
       />
       <SectionTitle
-        kicker={copy.presence}
-        title={copy.family}
-      />
-      <SectionTitle
         kicker="Contacts:"
         title={<>
           <Phone size={15} className="text-gold inline" /><a href="tel:9450375503">9450375503</a> <br />
