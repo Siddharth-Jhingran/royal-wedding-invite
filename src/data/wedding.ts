@@ -35,25 +35,52 @@ export const NAV_LINKS = [
 
 export const MILESTONES = [
   {
-    title: 'A Chance Encounter',
-    date: 'Jaipur, 2019',
-    detail:
-      'A monsoon evening at a family wedding, a shared glance across the mandap, and a conversation that lasted until dawn.',
-    icon: 'spark',
+    title: 'Mehandi Ceremony',
+    date: '19 NOvember 20126',
+    note:
+      'Let the colours of Mehandi, the rhythm of Music, and the joy of Togetherness fill Our Celebration. ',
+    icon: 'flower',
+    venue: 'At our sweet home, Sitapur',
+    time: '4:00 PM',
   },
   {
-    title: 'The Promise',
-    date: 'Udaipur, 2023',
-    detail:
-      'On the steps of Gangaur Ghat, Vikram asked for forever. Ananya answered with a smile brighter than the lake lamps.',
+    title: 'Godbharai Ceremony',
+    date: '20 November 2026',
+    note:
+    'On the steps of Gangaur Ghat, Vikram asked for forever. Ananya answered with a smile brighter than the lake lamps.',
     icon: 'heart',
+    venue: 'Queens Banquet Hall, Lucknow',
+    time: '7:00 PM',
   },
   {
-    title: 'Roka & Blessings',
-    date: 'Delhi, Spring 2026',
-    detail:
-      'Both families gathered to exchange sweets, blessings, and the first glimpse of a wedding painted in gold and maroon.',
-    icon: 'gift',
+    title: 'Haldi Ceremony',
+    date: '21 November 2026',
+    note:
+    'Both families gathered to exchange sweets, blessings, and the first glimpse of a wedding painted in gold and maroon.',
+    icon: 'flower',
+    venue: 'Inara Farms, Lucknow',
+    time: '11:00 AM',
+  },
+  {
+    title: 'Wedding Ceremony',
+    date: '21 November 2026',
+    icon: 'heart',
+    venue: 'Inara Farms, Lucknow',
+    time: '06:00 PM',
+  },
+  {
+    title: 'Khatu Shyam Kirtan',
+    date: '22 November 2026',
+    icon: 'flower',
+    venue: 'Inara Farms, Lucknow',
+    time: '01:00 PM',
+  },
+  {
+    title: 'Reception',
+    date: '22 November 2026',
+    icon: 'heart',
+    venue: 'Inara Farms, Lucknow',
+    time: '07:00 PM',
   },
 ] as const
 

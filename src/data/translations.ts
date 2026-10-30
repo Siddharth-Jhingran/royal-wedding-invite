@@ -50,6 +50,11 @@ export const COPY = {
       previous: 'Previous photo',
       next: 'Next photo',
     },
+    story: {
+      kicker: 'Celebrations',
+      title: 'Wedding Events',
+      subtitle: 'A complete guide to our wedding celebrations and ceremonies.',
+    },
     video: {
       kicker: 'Cinematic Blessing',
       title: 'The Wedding Invitation',
@@ -132,6 +137,19 @@ export const COPY = {
       back: 'चित्र-संग्रह पर लौटें',
       previous: 'पिछला चित्र',
       next: 'अगला चित्र',
+    },
+    story: {
+      kicker: 'शुभ उत्सव',
+      title: 'विवाह के समारोह',
+      subtitle: 'हमारे विवाह समारोहों और रस्मों की संपूर्ण जानकारी।',
+      events: [
+        { title: 'मेहंदी समारोह', date: '१९ नवंबर २०२६', time: 'शाम ४:०० बजे', venue: 'हमारे घर, सीतापुर' },
+        { title: 'गोदभराई समारोह', date: '२० नवंबर २०२६', time: 'शाम ७:०० बजे', venue: 'क्वीन्स बैंक्वेट हॉल, लखनऊ' },
+        { title: 'हल्दी समारोह', date: '२१ नवंबर २०२६', time: 'प्रातः ११:०० बजे', venue: 'इनारा फार्म्स, लखनऊ' },
+        { title: 'विवाह समारोह', date: '२१ नवंबर २०२६', time: 'शाम ६:०० बजे', venue: 'इनारा फार्म्स, लखनऊ' },
+        { title: 'खाटू श्याम कीर्तन', date: '२२ नवंबर २०२६', time: 'दोपहर १:०० बजे', venue: 'इनारा फार्म्स, लखनऊ' },
+        { title: 'स्वागत समारोह', date: '२२ नवंबर २०२६', time: 'शाम ७:०० बजे', venue: 'इनारा फार्म्स, लखनऊ' },
+      ],
     },
     video: {
       kicker: 'मंगलमय चलचित्र',

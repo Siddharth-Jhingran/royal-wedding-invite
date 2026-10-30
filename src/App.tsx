@@ -10,7 +10,7 @@ import PetalField from './components/PetalField'
 import PhotoGallery from './components/PhotoGallery'
 import RsvpSection from './components/RsvpSection'
 import ScratchCardDate from './components/ScratchCardDate'
-// import StoryTimeline from './components/StoryTimeline'
+import StoryTimeline from './components/StoryTimeline'
 import WeddingVideo from './components/WeddingVideo'
 import { WEDDING } from './data/wedding'
 import { useInvitationMusic } from './hooks/useInvitationMusic'
@@ -57,8 +57,8 @@ export default function App() {
               <ScratchCardDate language={language} />
               <CountdownTimer language={language} />
               <PhotoGallery language={language} />
-              {/* <StoryTimeline /> */}
               <WeddingVideo language={language} onPlaybackChange={setVideoPlaying} />
+              <StoryTimeline language={language} />
               <DestinationGuide language={language} />
               <RsvpSection language={language} />
               <Footer language={language} />
